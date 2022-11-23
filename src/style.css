@@ -1,3 +1,11 @@
+:root {
+  --InterFont: "Inter", sans-serif;
+  --MontserratFont: "Montserrat", sans-serif;
+  --mainColor: black;
+  --secondaryColor: white;
+  --primaryColor: rgba(221, 220, 220, 0.397);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,131 +13,188 @@
 
 body {
   box-sizing: border-box;
-  background: black;
+  background: var(--mainColor);
+  color: var(--secondaryColor);
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.activeBody {
+  background: var(--secondaryColor);
+  color: var(--mainColor);
+}
+
+.wrapper #sideBar .sideBar {
+  background: #111;
+  height: 100%;
+  width: 350px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.wrapper #sideBar .sideBar .container {
+  margin: 2rem;
+  margin-top: 4rem;
+}
+.wrapper #sideBar .sideBar .container .image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.wrapper #sideBar .sideBar .container .image img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.wrapper #sideBar .sideBar .container .sidebarContent {
+  margin-top: 1rem;
+}
+.wrapper #sideBar .sideBar .container .sidebarContent span {
+  display: block;
+}
+.wrapper #sideBar .sideBar .container .sidebarContent .name {
+  font-size: 25px;
+  font-family: var(--MontserratFont);
+}
+.wrapper #sideBar .sideBar .container .sidebarContent .gitHubUsername {
+  margin-top: 3px;
+  font-size: 15px;
+  font-family: var(--MontserratFont);
+}
+.wrapper #sideBar .sideBar .container .sidebarContent .bio {
+  margin-top: 20px;
+  font-family: var(--InterFont);
+  font-size: 15px;
+}
+.wrapper #sideBar .sideBar .container .sidebarContent .socialIcon {
+  margin-top: 20px;
+}
+.wrapper #sideBar .sideBar .container .sidebarContent .socialIcon span {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.wrapper #sideBar .sideBar .container .sidebarContent .socialIcon span a {
   color: white;
+  font-family: var(--InterFont);
+  text-decoration: none;
 }
-
-:root {
-  --montserratFont: "Montserrat", sans-serif;
-  --interFont: "Inter", sans-serif;
+.wrapper #sideBar .sidebarActive {
+  width: 0;
+  overflow-x: hidden;
 }
-
-@media (max-width: 600px) {
-  .samuelDamilare {
-    display: flex;
-  }
-  .samuelDamilare aside .sideBar {
-    display: none;
-    z-index: 1;
-    width: 350px;
-    background: #262626;
-    height: 100vh;
-    position: fixed;
-    transition: 0.5;
-    -webkit-transition: 0.5;
-    -moz-transition: 0.5;
-    -ms-transition: 0.5;
-    -o-transition: 0.5;
-  }
-  .samuelDamilare aside .sideBar .container .detail {
-    padding: 1.5rem;
-    margin-top: 8rem;
-  }
-  .samuelDamilare aside .sideBar .container .detail .image .img {
-    width: 8rem;
-    height: 8rem;
-    background: gold;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-  .samuelDamilare aside .sideBar .container .detail .details {
-    margin-top: 10px;
-    font-family: var(--montserratFont);
-    font-size: 18px;
-  }
-  .samuelDamilare aside .sideBar .container .detail .details .gitHubUsername {
-    margin-top: 5px;
-    font-size: 15px;
-  }
-  .samuelDamilare aside .sideBar .container .detail .details .bio {
-    margin-top: 20px;
-  }
-  .samuelDamilare aside .sideBar .container .detail .details .socialIcon {
-    margin-top: 20px;
-  }
-  .samuelDamilare aside .sideBar .container .detail .details .socialIcon div {
-    margin-top: 10px;
-  }
-  .samuelDamilare aside .sideBar .container .close {
-    position: absolute;
-    top: 0;
-    background: white;
-    color: black;
-    font-size: 18px;
-    padding: 10px 15px;
-    margin: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-family: var(--interFont);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-  }
-  .samuelDamilare main .container {
-    padding: 1.5rem;
-  }
-  .samuelDamilare main .container .works .toggle {
-    cursor: pointer;
-    padding: 10px 15px;
-    background: white;
-    color: black;
-    width: 1rem;
-    font-size: 18px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-  }
-  .samuelDamilare main .container .works .workdone {
-    margin-top: 2rem;
-  }
-  .samuelDamilare main .container .works .workdone h1 {
-    font-family: var(--interFont);
-    letter-spacing: 10px;
-  }
-  .samuelDamilare main .container .works .workdone .projects {
-    margin-top: 2rem;
-  }
-  .samuelDamilare main .container .works .workdone .projects .project {
-    padding: 20px;
-    background: #262626;
-    margin: 10px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-  .samuelDamilare main .container .works .workdone .projects .project .projectName {
-    font-family: var(--montserratFont);
-    font-size: 25px;
-  }
-  .samuelDamilare main .container .works .workdone .projects .project .projectDiscription {
-    margin-top: 10px;
-    font-family: var(--interFont);
-  }
-  .samuelDamilare main .container .works .workdone .projects .project .repoIcon {
-    margin-top: 10px;
-    display: flex;
-    font-family: var(--interFont);
-  }
-  .samuelDamilare main .container .works .workdone .projects .project .repoIcon p:nth-child(2) {
-    margin-left: 10px;
-  }
+.wrapper #sideBar .sidebarTheme {
+  background: var(--primaryColor);
+}
+.wrapper #sideBar .sidebarTheme .container .sidebarContent .socialIcon span a {
+  color: black;
+}
+.wrapper #sideBar .toggle {
+  margin-left: 23rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  background: var(--secondaryColor);
+  color: var(--mainColor);
+  width: 0.8rem;
+  padding: 10px 15px;
+  border-radius: 2px;
+  transition: 0.5s;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+.wrapper #sideBar .toggleActive {
+  margin-left: 1rem;
+}
+.wrapper main {
+  margin-left: 23rem;
+  margin-top: 5rem;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  overflow: hidden;
+}
+.wrapper main .container .theme {
+  color: var(--secondaryColor);
+  position: absolute;
+  right: 2em;
+  top: 1rem;
+  font-size: 18px;
+  cursor: pointer;
+}
+.wrapper main .container .themeActive {
+  color: var(--mainColor);
+  transition: 1s;
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+.wrapper main .container h1 {
+  font-family: var(--InterFont);
+  letter-spacing: 10px;
+}
+.wrapper main .container .projects {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.wrapper main .container .projects .project {
+  padding: 10px;
+  background: #111;
+  margin: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.wrapper main .container .projects .project .projectName {
+  font-family: var(--InterFont);
+  font-size: 20px;
+}
+.wrapper main .container .projects .project .projectDiscription {
+  margin-top: 10px;
+  font-family: var(--MontserratFont);
+  font-size: 15px;
+}
+.wrapper main .container .projects .project .icons {
+  margin-top: 10px;
+  font-family: var(--MontserratFont);
+  font-size: 12px;
+}
+.wrapper main .container .projects .project .icons span:nth-child(2) {
+  margin-left: 10px;
+}
+.wrapper main .container .projects .projectActive {
+  background: var(--primaryColor);
+  color: rgb(66, 66, 66);
+}
+.wrapper .mainActive {
+  margin-left: 1rem;
 }/*# sourceMappingURL=style.css.map */

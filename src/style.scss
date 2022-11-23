@@ -1,3 +1,11 @@
+:root{
+    --InterFont: 'Inter', sans-serif;
+    --MontserratFont: 'Montserrat', sans-serif;
+    --mainColor: black;
+    --secondaryColor: white;
+    --primaryColor: rgba(221, 220, 220, 0.397);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,158 +13,224 @@
 
 body{
     box-sizing: border-box;
-    background: black;
-    color: white;
+    background: var(--mainColor);
+    color: var(--secondaryColor);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
-:root{
-    --montserratFont: 'Montserrat', sans-serif;
-    --interFont: 'Inter', sans-serif;
+.activeBody{
+    background: var(--secondaryColor);
+    color: var(--mainColor);
 }
 
-
-@media(max-width: 600px){
-    .samuelDamilare{
-        display: flex;
-
-        aside{
-            .sideBar{
-                display: none;
-                z-index: 1;
-                width: 350px;
-                background: #262626;
-                height: 100vh;
-                position: fixed;
-                transition: 0.5;
-                -webkit-transition: 0.5;
-                -moz-transition: 0.5;
-                -ms-transition: 0.5;
-                -o-transition: 0.5;
-
-                .container{
-                    .detail{
-                        padding: 1.5rem;
-                        margin-top: 8rem;
-
-                        .image{
-                            .img{
-                                width: 8rem;
-                                height: 8rem;
-                                background: gold;
-                                border-radius: 10px;
-                                -webkit-border-radius: 10px;
-                                -moz-border-radius: 10px;
-                                -ms-border-radius: 10px;
-                                -o-border-radius: 10px;
-                            }
-                        }
-
-                        .details{
+.wrapper{
+    #sideBar{
+        .sideBar{
+            background: #111;
+            height: 100%;
+            width: 350px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+            padding-top: 60px;
+    
+            .container{
+                margin: 2rem;
+                margin-top: 4rem;
+                .image{
+                    width: 200px;
+                    height: 200px;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+    
+                    img{
+                        width: 100%;
+                        border-radius: 10px ;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        -ms-border-radius: 10px;
+                        -o-border-radius: 10px;
+                    }
+                }
+    
+                .sidebarContent{
+                    margin-top: 1rem;
+                    span{
+                        display: block;
+                    }
+                    .name{
+                        font-size: 25px;
+                        font-family: var(--MontserratFont);
+                    }
+                    .gitHubUsername{
+                        margin-top: 3px;
+                        font-size: 15px;
+                        font-family: var(--MontserratFont);
+                    }
+                    .bio{
+                        margin-top: 20px;
+                        font-family: var(--InterFont);
+                        font-size: 15px;
+                    }
+    
+                    .socialIcon{
+                        margin-top: 20px;
+                        span{
                             margin-top: 10px;
-                            font-family: var(--montserratFont);
-                            font-size: 18px;
-
-                            .gitHubUsername{
-                                margin-top: 5px;
-                                font-size: 15px;
-                            }
-
-                            .bio{
-                                margin-top: 20px;
-                            }
-
-                            .socialIcon{
-                                margin-top: 20px;
-                                div{
-                                    margin-top: 10px;
-                                }
+                            font-size: 15px;
+                            
+                            a{
+                                color: white;
+                                font-family: var(--InterFont);
+                                text-decoration: none;
                             }
                         }
                     }
-                    .close{
-                        position: absolute;
-                        top: 0;
-                        background: white;
-                        color: black;
-                        font-size: 18px;
-                        padding: 10px 15px;
-                        margin: 10px;
-                        right: 10px;
-                        cursor: pointer;
-                        font-family: var(--interFont);
-                        border-radius: 5px;
-                        -webkit-border-radius: 5px;
-                        -moz-border-radius: 5px;
-                        -ms-border-radius: 5px;
-                        -o-border-radius: 5px;
+                }
+            }
+            
+        }
+
+        .sidebarActive{
+            width: 0;
+            overflow-x: hidden;
+        }
+
+        .sidebarTheme{
+            background: var(--primaryColor);
+            .container{
+                .sidebarContent{
+                    .socialIcon{
+                        span{
+                            a{
+                                color: black;
+                            }
+                        }
                     }
                 }
             }
         }
 
-        main{
-            .container{
-                padding: 1.5rem;
-                .works{
-                    .toggle{
-                        cursor: pointer;
-                        padding: 10px 15px;
-                        background: white;
-                        color: black;
-                        width: 1rem;
-                        font-size: 18px;
-                        border-radius: 5px;
-                        -webkit-border-radius: 5px;
-                        -moz-border-radius: 5px;
-                        -ms-border-radius: 5px;
-                        -o-border-radius: 5px;
+        .toggle{
+            margin-left: 23rem;
+            margin-top: 0.5rem;
+            cursor: pointer;
+            background: var(--secondaryColor);
+            color: var(--mainColor);
+            width: 0.8rem;
+            padding: 10px 15px;
+            border-radius: 2px;
+            transition: 0.5s;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
+}
+
+        .toggleActive{
+            margin-left: 1rem;
+        }
+
+    }
+
+    main{
+        margin-left: 23rem;
+        margin-top: 5rem;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        overflow: hidden;
+
+        .container{
+            .theme{
+                color: var(--secondaryColor);
+                position: absolute;
+                right: 2em;
+                top: 1rem;
+                font-size: 18px;
+                cursor: pointer;
+            }
+
+            .themeActive{
+                color: var(--mainColor);
+                transition: 1s;
+                transform: rotate(-20deg);
+                -webkit-transform: rotate(-20deg);
+                -moz-transform: rotate(-20deg);
+                -ms-transform: rotate(-20deg);
+                -o-transform: rotate(-20deg);
+                -webkit-transition: 1s;
+                -moz-transition: 1s;
+                -ms-transition: 1s;
+                -o-transition: 1s;
+            }
+
+            h1{
+                font-family: var(--InterFont);
+                letter-spacing: 10px;
+            }
+
+            .projects{
+                margin-top: 2rem;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+                .project{
+                    padding: 10px;
+                    background: #111;
+                    margin: 10px;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
+
+                    .projectName{
+                        font-family: var(--InterFont);
+                        font-size: 20px;
                     }
 
-                    .workdone{
-                        margin-top: 2rem;
+                    .projectDiscription{
+                        margin-top: 10px;
+                        font-family: var(--MontserratFont);
+                        font-size: 15px;
+                    }
 
-                        h1{
-                            font-family: var(--interFont);
-                            letter-spacing: 10px;
-                        }
+                    .icons{
+                        margin-top: 10px;
+                        font-family: var(--MontserratFont);
+                        font-size: 12px;
 
-                        .projects{
-                            margin-top: 2rem;
-                            .project{
-                                padding: 20px;
-                                background: #262626;
-                                margin: 10px;
-                                border-radius: 10px;
-                                -webkit-border-radius: 10px;
-                                -moz-border-radius: 10px;
-                                -ms-border-radius: 10px;
-                                -o-border-radius: 10px;
-
-                                .projectName{
-                                    font-family: var(--montserratFont);
-                                    font-size: 25px;
-                                }
-
-                                .projectDiscription{
-                                    margin-top: 10px;
-                                    font-family: var(--interFont);
-                                }
-
-                                .repoIcon{
-                                    margin-top: 10px;
-                                    display: flex;
-                                    font-family: var(--interFont);
-
-                                    p:nth-child(2){
-                                        margin-left: 10px;
-                                    }
-                                }
-                            }
+                        span:nth-child(2){
+                            margin-left: 10px;
                         }
                     }
+                }
+
+                .projectActive{
+                    background: var(--primaryColor);
+                    color: rgb(66, 66, 66);
                 }
             }
         }
     }
+    .mainActive{
+        margin-left: 1rem;
+    }
 }
-
