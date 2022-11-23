@@ -19,6 +19,7 @@ body {
     display: flex;
   }
   .samuelDamilare aside .sideBar {
+    display: none;
     z-index: 1;
     width: 350px;
     background: #262626;
@@ -54,7 +55,7 @@ body {
     font-size: 15px;
   }
   .samuelDamilare aside .sideBar .container .detail .details .bio {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .samuelDamilare aside .sideBar .container .detail .details .socialIcon {
     margin-top: 20px;
@@ -83,6 +84,7 @@ body {
     padding: 1.5rem;
   }
   .samuelDamilare main .container .works .toggle {
+    cursor: pointer;
     padding: 10px 15px;
     background: white;
     color: black;

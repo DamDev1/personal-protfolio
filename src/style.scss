@@ -21,6 +21,7 @@ body{
 
         aside{
             .sideBar{
+                display: none;
                 z-index: 1;
                 width: 350px;
                 background: #262626;
@@ -61,7 +62,7 @@ body{
                             }
 
                             .bio{
-                                margin-top: 10px;
+                                margin-top: 20px;
                             }
 
                             .socialIcon{
@@ -98,6 +99,7 @@ body{
                 padding: 1.5rem;
                 .works{
                     .toggle{
+                        cursor: pointer;
                         padding: 10px 15px;
                         background: white;
                         color: black;

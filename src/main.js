@@ -1,12 +1,11 @@
-const closeSideBar = document.querySelector(".close");
-const sideBar = document.querySelector("#sidebar");
-const toggle = document.querySelector(".toggle")
+const openSidebar = document.querySelector(".toggle");
+const sideBar = document.querySelector(".sideBar");
+const closeSideBar = document.querySelector(".close")
 
-toggle.addEventListener("click", function() {
-    sideBar.style.display = "block";
-    alert("hello")
-})
+openSidebar.addEventListener("click", () =>{
+    sideBar.style.display = "block"
+});
 
-closeSideBar.addEventListener("click", function() {
-    sideBar.style.display = "none";
+closeSideBar.addEventListener("click", () =>{
+    sideBar.style.display = "none"
 })
