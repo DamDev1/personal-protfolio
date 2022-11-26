@@ -1,30 +1,35 @@
-:root {
-  --InterFont: "Inter", sans-serif;
-  --MontserratFont: "Montserrat", sans-serif;
-  --mainColor: black;
-  --secondaryColor: white;
-  --primaryColor: rgba(221, 220, 220, 0.397);
-}
-
 * {
   margin: 0;
   padding: 0;
 }
 
+.light {
+  --InterFont: "Inter", sans-serif;
+  --MontserratFont: "Montserrat", sans-serif;
+  --color-1: #e4e6e7;
+  --color-2: #e9ecef;
+  --color-3: #8da9c4;
+  --color-4: rgba(80, 82, 110, 0.884);
+}
+
+.dark {
+  --InterFont: "Inter", sans-serif;
+  --MontserratFont: "Montserrat", sans-serif;
+  --color-1: #1E1F26;
+  --color-2: #292c33;
+  --color-3: rgb(39, 40, 42);
+  --color-4: rgba(186, 186, 202, 0.527);
+}
+
 body {
+  background: var(--color-1);
+  color: var(--color-4);
   box-sizing: border-box;
-  background: var(--mainColor);
-  color: var(--secondaryColor);
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
-}
-
-.activeBody {
-  background: var(--secondaryColor);
-  color: var(--mainColor);
 }
 
 .wrapper #sideBar {
@@ -34,7 +39,7 @@ body {
 }
 .wrapper #sideBar .sideBar {
   overflow-y: scroll;
-  background: #111;
+  background: var(--color-2);
   height: 100%;
   width: 350px;
   position: fixed;
@@ -92,9 +97,14 @@ body {
 .wrapper #sideBar .sideBar .container .sidebarContent .socialIcon span {
   margin-top: 10px;
   font-size: 15px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 .wrapper #sideBar .sideBar .container .sidebarContent .socialIcon span a {
-  color: white;
+  color: var(--color-4);
   font-family: var(--InterFont);
   text-decoration: none;
   margin-left: 10px;
@@ -103,23 +113,17 @@ body {
   width: 2px;
 }
 .wrapper #sideBar ::-webkit-scrollbar-track {
-  background: rgba(38, 38, 38, 0.2117647059);
+  background: transparent;
 }
 .wrapper #sideBar ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: transparent;
 }
 .wrapper #sideBar ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: transparent;
 }
 .wrapper #sideBar .sidebarActive {
   width: 0;
   overflow-x: hidden;
-}
-.wrapper #sideBar .sidebarTheme {
-  background: var(--primaryColor);
-}
-.wrapper #sideBar .sidebarTheme .container .sidebarContent .socialIcon span a {
-  color: black;
 }
 .wrapper #sideBar .toggle {
   position: fixed;
@@ -127,8 +131,8 @@ body {
   margin-left: 22.5rem;
   margin-top: 0.5rem;
   cursor: pointer;
-  background: var(--secondaryColor);
-  color: var(--mainColor);
+  background: var(--color-4);
+  color: var(--color-2);
   width: 0.8rem;
   padding: 10px 15px;
   border-radius: 2px;
@@ -191,14 +195,19 @@ body {
 }
 .wrapper main .container .projects .project {
   padding: 10px;
-  color: rgba(190, 190, 190, 0.822);
-  background: #111;
+  color: var(--color-4);
+  background: var(--color-2);
   margin: 10px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 .wrapper main .container .projects .project .projectName {
   font-family: var(--InterFont);

@@ -1,5 +1,6 @@
 const projects = document.querySelector(".projects");
 
+
 async function fetchData(){
     const api = await (fetch('https://api.github.com/users/DamDev1/repos', {
         headers: new Headers({
@@ -16,6 +17,10 @@ async function fetchData(){
         const project = document.createElement("div");
         project.className = "project"
         projects.appendChild(project)
+
+        project.addEventListener("click",()=>{
+            alert("hello")
+        })
 
         const projectname = document.createElement('h2')
         projectname.className = "projectName";
