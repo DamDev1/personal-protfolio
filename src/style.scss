@@ -260,3 +260,118 @@ body{
         margin-left: 1rem;
     }
 }
+
+#popUp{
+    width: 100%;
+    height: 100vh;
+    background: #1f1f1f9f;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: none;
+    overflow-y: scroll;
+
+    .container{
+        margin-top: 2rem;
+        .model{
+            width: 30rem;
+            margin-left: auto;
+            margin-right: auto;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+
+            h1{
+                font-family: var(--InterFont);
+                letter-spacing: 10px;
+            }
+
+            .repositoryName{
+                margin-top: 10px;
+                font-family: var(--MontserratFont);
+                font-size: 15px;
+            }
+
+            .repositoryDetail{
+                margin-top: 10px;
+            }
+
+            .tabContainer{
+                margin-top: 1rem;
+                background: #262626;
+                font-family: var(--MontserratFont);
+                padding: 10px;
+                padding-left: 0;
+                .tabLinks{
+                    .tab_link{
+                        padding: 10px;
+                        cursor: pointer;
+                        color: white;
+                        font-size: 13px;
+                    }
+
+                    .tab_link:hover{
+                        background: rgb(57, 56, 58);
+                    }
+
+                    .active{
+                        background: rgb(57, 56, 58);
+                    }
+                }
+
+                .tabContents{
+                    margin-top: 10px;
+                    .tab_content{
+                        padding: 10px;
+                        display: none;
+                        input{
+                            margin-top: 10px;
+                            padding: 10px;
+                            width: 95%;
+                            border: 0;
+                            outline: 0;
+                        }
+                    }
+
+                    .active{
+                        display: block;
+                    }
+                }
+            }
+
+            .ProgrammingLanguages{
+                background: #262626;
+
+                .languageContainer{
+                    color: white;
+                    font-size: 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    font-family: var(--InterFont);
+                    font-weight: bold;
+                }
+            }
+
+            .view{
+                button{
+                    cursor: pointer;
+                    margin-top: 10px;
+                    padding: 10px;
+                    background: green;
+                    color: white;
+                    border: 0;
+                    border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -ms-border-radius: 3px;
+                    -o-border-radius: 3px;
+                }
+            }
+        }
+    }
+}
