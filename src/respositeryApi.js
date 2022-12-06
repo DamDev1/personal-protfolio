@@ -12,6 +12,9 @@ const cloneSsh = document.querySelector("#cloneSsh input");
 //view github
 const view = document.querySelector(".view")
 
+//close model
+const closeModel = document.querySelector(".closeModel")
+
 async function fetchData(){
     const api = await (fetch('https://api.github.com/users/DamDev1/repos', {
         headers: new Headers({
@@ -76,6 +79,13 @@ async function fetchData(){
                         languageContainer.appendChild(commit)
                         commit.className = "commit"
                         commit.innerHTML = data[0].commit.message;
+
+                        closeModel.addEventListener("click", ()=>{
+                            popUp.style.display = "none"
+                            if(languageContainer.children.length > 0){
+                                languageContainer.innerHTML = ""
+                            }
+                        })
                     })
                     
                 }
@@ -120,3 +130,5 @@ async function fetchData(){
 }
 
 fetchData();
+
+

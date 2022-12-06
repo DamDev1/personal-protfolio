@@ -194,6 +194,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .wrapper main .container .projects .project {
+  cursor: pointer;
   padding: 10px;
   color: var(--color-4);
   background: var(--color-2);
@@ -226,8 +227,14 @@ body {
 .wrapper main .container .projects .project .icons span:nth-child(2) {
   margin-left: 10px;
 }
+.wrapper main .container .projects .project:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
 .wrapper main .container .projects .projectActive {
-  background: var(--primaryColor);
   color: rgb(66, 66, 66);
 }
 .wrapper .mainActive {
@@ -251,7 +258,7 @@ body {
   width: 30rem;
   margin-left: auto;
   margin-right: auto;
-  background: white;
+  background: var(--color-2);
   padding: 10px;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -263,6 +270,15 @@ body {
   font-family: var(--InterFont);
   letter-spacing: 10px;
 }
+#popUp .container .model .closeModel {
+  position: absolute;
+  font-size: 20px;
+  right: 27rem;
+  top: 3rem;
+  font-family: var(--MontserratFont);
+  font-weight: bold;
+  cursor: pointer;
+}
 #popUp .container .model .repositoryName {
   margin-top: 10px;
   font-family: var(--MontserratFont);
@@ -273,45 +289,49 @@ body {
 }
 #popUp .container .model .tabContainer {
   margin-top: 1rem;
-  background: #262626;
+  background: rgba(139, 139, 139, 0.2274509804);
   font-family: var(--MontserratFont);
   padding: 10px;
   padding-left: 0;
-}
-#popUp .container .model .tabContainer .tabLinks .tab_link {
-  padding: 10px;
-  cursor: pointer;
-  color: white;
-  font-size: 13px;
-}
-#popUp .container .model .tabContainer .tabLinks .tab_link:hover {
-  background: rgb(57, 56, 58);
-}
-#popUp .container .model .tabContainer .tabLinks .active {
-  background: rgb(57, 56, 58);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 #popUp .container .model .tabContainer .tabContents {
   margin-top: 10px;
 }
 #popUp .container .model .tabContainer .tabContents .tab_content {
   padding: 10px;
-  display: none;
+}
+#popUp .container .model .tabContainer .tabContents .tab_content label {
+  margin-top: 10px;
+  font-size: 14px;
 }
 #popUp .container .model .tabContainer .tabContents .tab_content input {
-  margin-top: 10px;
   padding: 10px;
   width: 95%;
   border: 0;
   outline: 0;
-}
-#popUp .container .model .tabContainer .tabContents .active {
-  display: block;
+  margin-left: 0.5rem;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 #popUp .container .model .ProgrammingLanguages {
-  background: #262626;
+  background: rgba(139, 139, 139, 0.2274509804);
+  border-radius: 0px 3px 3px 0px;
+  -webkit-border-radius: 0px 3px 3px 0px;
+  -moz-border-radius: 0px 3px 3px 0px;
+  -ms-border-radius: 0px 3px 3px 0px;
+  -o-border-radius: 0px 3px 3px 0px;
 }
 #popUp .container .model .ProgrammingLanguages .languageContainer {
-  color: white;
   font-size: 12px;
   display: flex;
   justify-content: space-between;
@@ -331,4 +351,13 @@ body {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+}
+
+@media (max-width: 680px) {
+  #popUp .container .model {
+    width: 90%;
+  }
+  #popUp .container .model .tabContainer .tabContents .tab_content input {
+    width: 93%;
+  }
 }/*# sourceMappingURL=style.css.map */

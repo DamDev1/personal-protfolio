@@ -212,6 +212,7 @@ body{
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
                 .project{
+                    cursor: pointer;
                     padding: 10px;
                     color: var(--color-4);
                     background: var(--color-2);
@@ -249,8 +250,15 @@ body{
                     }
                 }
 
+                .project:hover{
+                    transform: translateY(-5px);
+                    -webkit-transform: translateY(-5px);
+                    -moz-transform: translateY(-5px);
+                    -ms-transform: translateY(-5px);
+                    -o-transform: translateY(-5px);
+}
+
                 .projectActive{
-                    background: var(--primaryColor);
                     color: rgb(66, 66, 66);
                 }
             }
@@ -277,7 +285,7 @@ body{
             width: 30rem;
             margin-left: auto;
             margin-right: auto;
-            background: white;
+            background: var(--color-2);
             padding: 10px;
             border-radius: 5px;
             -webkit-border-radius: 5px;
@@ -288,6 +296,16 @@ body{
             h1{
                 font-family: var(--InterFont);
                 letter-spacing: 10px;
+            }
+
+            .closeModel{
+                position: absolute;
+                font-size: 20px;
+                right: 27rem;
+                top: 3rem;
+                font-family: var(--MontserratFont);
+                font-weight: bold;
+                cursor: pointer;
             }
 
             .repositoryName{
@@ -302,52 +320,52 @@ body{
 
             .tabContainer{
                 margin-top: 1rem;
-                background: #262626;
+                background: #8b8b8b3a;
                 font-family: var(--MontserratFont);
                 padding: 10px;
                 padding-left: 0;
-                .tabLinks{
-                    .tab_link{
-                        padding: 10px;
-                        cursor: pointer;
-                        color: white;
-                        font-size: 13px;
-                    }
-
-                    .tab_link:hover{
-                        background: rgb(57, 56, 58);
-                    }
-
-                    .active{
-                        background: rgb(57, 56, 58);
-                    }
-                }
+                border-radius: 3px;
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                -ms-border-radius: 3px;
+                -o-border-radius: 3px;
 
                 .tabContents{
                     margin-top: 10px;
                     .tab_content{
                         padding: 10px;
-                        display: none;
-                        input{
+                        label{
                             margin-top: 10px;
+                            font-size: 14px;
+                        }
+                        input{
                             padding: 10px;
                             width: 95%;
                             border: 0;
                             outline: 0;
+                            margin-left: 0.5rem;
+                            margin-bottom: 10px;
+                            margin-top: 5px;
+                            border-radius: 3px;
+                            -webkit-border-radius: 3px;
+                            -moz-border-radius: 3px;
+                            -ms-border-radius: 3px;
+                            -o-border-radius: 3px;
                         }
                     }
 
-                    .active{
-                        display: block;
-                    }
                 }
             }
 
             .ProgrammingLanguages{
-                background: #262626;
+                background: #8b8b8b3a;
+                border-radius: 0px 3px 3px 0px;
+                -webkit-border-radius: 0px 3px 3px 0px;
+                -moz-border-radius: 0px 3px 3px 0px;
+                -ms-border-radius: 0px 3px 3px 0px;
+                -o-border-radius: 0px 3px 3px 0px;
 
                 .languageContainer{
-                    color: white;
                     font-size: 12px;
                     display: flex;
                     justify-content: space-between;
@@ -370,6 +388,26 @@ body{
                     -moz-border-radius: 3px;
                     -ms-border-radius: 3px;
                     -o-border-radius: 3px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 680px){
+    #popUp{
+        .container{
+            .model{
+                width: 90%;
+
+                .tabContainer{
+                    .tabContents{
+                        .tab_content{
+                            input{
+                                width: 93%;
+                            }
+                        }
+                    }
                 }
             }
         }
