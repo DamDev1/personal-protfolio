@@ -83,7 +83,7 @@ async function fetchData(){
                         closeModel.addEventListener("click", ()=>{
                             popUp.style.display = "none"
                             if(languageContainer.children.length > 0){
-                                languageContainer.innerHTML = ""
+                                languageContainer.style.display = "none"
                             }
                         })
                     })
