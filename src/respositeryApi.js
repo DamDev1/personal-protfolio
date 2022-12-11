@@ -109,7 +109,7 @@ async function fetchData(){
         repositoryDetail.textContent = projectDiscription.textContent;
 
         if(projectDiscription.innerHTML == ""){
-            projectDiscription.innerHTML = "i love creating empty repositary";
+            projectDiscription.innerHTML = "No Discription For This Repository";
         }else{
             projectDiscription.innerHTML = element.description;
         }

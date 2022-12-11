@@ -48,7 +48,7 @@ body{
     
             .container{
                 margin: 2rem;
-                margin-top: 4rem;
+                margin-top: 30%;
                 .image{
                     width: 200px;
                     height: 200px;
@@ -293,19 +293,21 @@ body{
             -ms-border-radius: 5px;
             -o-border-radius: 5px;
 
-            h1{
-                font-family: var(--InterFont);
-                letter-spacing: 10px;
-            }
-
-            .closeModel{
-                position: absolute;
-                font-size: 20px;
-                right: 27rem;
-                top: 3rem;
-                font-family: var(--MontserratFont);
-                font-weight: bold;
-                cursor: pointer;
+            .modelHeader{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h1{
+                    font-family: var(--InterFont);
+                    letter-spacing: 10px;
+                }
+    
+                .closeModel{
+                    font-size: 20px;
+                    font-family: var(--MontserratFont);
+                    font-weight: bold;
+                    cursor: pointer;
+                }
             }
 
             .repositoryName{

@@ -51,7 +51,7 @@ body {
 }
 .wrapper #sideBar .sideBar .container {
   margin: 2rem;
-  margin-top: 4rem;
+  margin-top: 30%;
 }
 .wrapper #sideBar .sideBar .container .image {
   width: 200px;
@@ -266,15 +266,17 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-#popUp .container .model h1 {
+#popUp .container .model .modelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#popUp .container .model .modelHeader h1 {
   font-family: var(--InterFont);
   letter-spacing: 10px;
 }
-#popUp .container .model .closeModel {
-  position: absolute;
+#popUp .container .model .modelHeader .closeModel {
   font-size: 20px;
-  right: 27rem;
-  top: 3rem;
   font-family: var(--MontserratFont);
   font-weight: bold;
   cursor: pointer;
